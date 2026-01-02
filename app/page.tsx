@@ -4,125 +4,137 @@ import { ArrowRight, Check, MapPin, Phone, Star } from "lucide-react";
 
 export default function Home() {
     return (
-        <main className="flex min-h-screen flex-col items-center justify-between">
-            {/* Hero Section */}
-            <section className="relative w-full h-[90vh] flex items-center justify-center overflow-hidden bg-stone-900">
-                <div className="absolute inset-0 z-0 opacity-60">
-                    {/* Placeholder for the generated hero image */}
-                    <div className="w-full h-full bg-[url('/hero.jpg')] bg-cover bg-center" />
-                </div>
-                <div className="z-10 text-center px-4 max-w-4xl">
-                    <h1 className="font-serif text-5xl md:text-7xl text-white mb-6 tracking-tight">
-                        North Melbourne's <br />
-                        <span className="italic">Heritage Bathroom</span> Specialists
-                    </h1>
-                    <p className="text-stone-200 text-lg md:text-xl mb-8 max-w-2xl mx-auto font-light">
-                        Restoring Victorian elegance with modern luxury. Serving North Melbourne (3051), Kensington, and Parkville.
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Link href="#contact" className="px-8 py-4 bg-white text-stone-900 font-medium hover:bg-stone-100 transition-colors uppercase tracking-widest text-sm">
-                            Request Consultation
+        <main className="flex min-h-screen flex-col items-center justify-between font-sans text-slate-900 bg-white">
+            {/* Navigation */}
+            <nav className="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
+                <div className="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                        <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
+                            <Star className="text-white w-6 h-6 fill-current" />
+                        </div>
+                        <span className="font-black text-2xl tracking-tighter text-slate-900">HANDYMAN <span className="text-blue-600">MELBOURNE</span></span>
+                    </div>
+                    <div className="hidden md:flex items-center gap-8 text-sm font-bold uppercase tracking-widest text-slate-500">
+                        <Link href="#services" className="hover:text-blue-600 transition-colors">Services</Link>
+                        <Link href="#about" className="hover:text-blue-600 transition-colors">Why Us</Link>
+                        <Link href="tel:0400000000" className="flex items-center gap-2 bg-slate-900 text-white px-6 py-3 rounded-full hover:bg-slate-800 transition-all">
+                            <Phone className="w-4 h-4" /> 0400 000 000
                         </Link>
                     </div>
                 </div>
-            </section>
+            </nav>
 
-            {/* Trust Signals / Quick Answers (GEO) */}
-            <section className="w-full py-20 px-6 bg-stone-50">
-                <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-12">
-                    <div>
-                        <h3 className="font-serif text-2xl mb-4 text-stone-800">Local Expertise</h3>
-                        <p className="text-stone-600">
-                            Specialized knowledge of <strong>North Melbourne</strong> heritage overlays, terrace plumbing constraints, and council permits for 3051 renovations.
+            {/* Hero Section */}
+            <section className="relative w-full pt-32 pb-20 md:pt-48 md:pb-32 px-4 overflow-hidden">
+                <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+                    <div className="relative z-10 text-center lg:text-left">
+                        <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 text-blue-700 rounded-full text-xs font-black uppercase tracking-widest mb-8">
+                            <Check className="w-4 h-4" /> Top Rated Local Service
+                        </div>
+                        <h1 className="text-6xl md:text-8xl font-black text-slate-900 leading-[0.9] mb-8 tracking-tighter">
+                            Professional <br />
+                            <span className="text-blue-600">Handyman</span> <br />
+                            Services.
+                        </h1>
+                        <p className="text-slate-500 text-xl md:text-2xl mb-12 max-w-xl mx-auto lg:mx-0 font-medium leading-relaxed">
+                            Trusted by Melbourne homeowners for reliable repairs, maintenance, and installations. Quality work, guaranteed.
                         </p>
+
+                        <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                            <Link href="#contact" className="px-10 py-5 bg-blue-600 text-white rounded-2xl font-black text-lg hover:bg-blue-700 transition-all shadow-xl shadow-blue-200 flex items-center justify-center gap-3 group">
+                                Get a Fast Quote <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                            </Link>
+                        </div>
+
+                        <div className="mt-12 flex flex-wrap justify-center lg:justify-start items-center gap-8 opacity-60">
+                            <div className="flex items-center gap-2">
+                                <Check className="w-5 h-5 text-blue-600" />
+                                <span className="font-bold text-sm">Fully Insured</span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                                <Check className="w-5 h-5 text-blue-600" />
+                                <span className="font-bold text-sm">Police Checked</span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                                <Check className="w-5 h-5 text-blue-600" />
+                                <span className="font-bold text-sm">Melbourne Wide</span>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        <h3 className="font-serif text-2xl mb-4 text-stone-800">Premium Craftsmanship</h3>
-                        <p className="text-stone-600">
-                            Master waterproofing, frameless glass installation, and bespoke joinery using high-end materials like bluestone, brass, and timber.
-                        </p>
-                    </div>
-                    <div>
-                        <h3 className="font-serif text-2xl mb-4 text-stone-800">Transparent Pricing</h3>
-                        <p className="text-stone-600">
-                            Detailed fixed-price quotes. Luxury bathroom renovations in North Melbourne typically range from $35k to $80k depending on finishes and structural work.
-                        </p>
+
+                    <div className="relative">
+                        <div className="absolute -inset-4 bg-blue-100 rounded-[40px] rotate-3 z-0" />
+                        <div className="relative z-10 aspect-[4/5] rounded-[32px] overflow-hidden shadow-2xl">
+                            <div className="w-full h-full bg-[url('/handyman_hero.jpg')] bg-cover bg-center" />
+                        </div>
+                        <div className="absolute -bottom-10 -left-10 bg-white p-8 rounded-3xl shadow-2xl z-20 hidden md:block border border-slate-100">
+                            <div className="flex gap-1 text-yellow-400 mb-2">
+                                <Star className="w-5 h-5 fill-current" />
+                                <Star className="w-5 h-5 fill-current" />
+                                <Star className="w-5 h-5 fill-current" />
+                                <Star className="w-5 h-5 fill-current" />
+                                <Star className="w-5 h-5 fill-current" />
+                            </div>
+                            <div className="font-black text-2xl text-slate-900">4.9/5 Rating</div>
+                            <div className="text-slate-500 font-bold uppercase text-xs tracking-widest">Based on 200+ Reviews</div>
+                        </div>
                     </div>
                 </div>
             </section>
 
             {/* Services */}
-            <section className="w-full py-24 bg-white">
-                <div className="max-w-7xl mx-auto px-6">
-                    <div className="mb-16">
-                        <span className="text-stone-500 uppercase tracking-widest text-sm font-medium">Our Services</span>
-                        <h2 className="font-serif text-4xl mt-2 text-stone-900">Curated Restoration & Design</h2>
+            <section id="services" className="w-full py-32 bg-slate-50 px-4">
+                <div className="max-w-7xl mx-auto">
+                    <div className="text-center max-w-2xl mx-auto mb-20">
+                        <h2 className="text-4xl md:text-5xl font-black mb-6 tracking-tight">One Call Fixes It All.</h2>
+                        <p className="text-slate-500 text-lg font-medium">From the smallest repairs to general home maintenance, we handle the jobs you don't have time for.</p>
                     </div>
 
-                    <div className="grid md:grid-cols-2 gap-16">
-                        <div className="space-y-8">
-                            <div className="border-b border-stone-200 pb-8">
-                                <h3 className="text-2xl font-serif mb-2">Heritage Ensuite Restoration</h3>
-                                <p className="text-stone-600">Respecting the Victorian bones of your terrace while introducing modern amenities. Skylights, hidden cisterns, and period-correct tiling.</p>
+                    <div className="grid md:grid-cols-3 gap-8">
+                        {[
+                            { title: "Home Maintenance", desc: "Patching walls, fixing doors, hanging art, and general property upkeep.", icon: <Check className="w-8 h-8 text-blue-600" /> },
+                            { title: "Furniture Assembly", desc: "Professional flat-pack assembly for IKEA, Fantastic Furniture, and more.", icon: <Star className="w-8 h-8 text-blue-600" /> },
+                            { title: "Installations", desc: "TV mounting, blind installation, shelving, and smoke alarm battery changes.", icon: <MapPin className="w-8 h-8 text-blue-600" /> }
+                        ].map((s, i) => (
+                            <div key={i} className="bg-white p-10 rounded-[32px] border border-slate-200/50 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500">
+                                <div className="mb-6">{s.icon}</div>
+                                <h3 className="text-2xl font-black mb-4 tracking-tight">{s.title}</h3>
+                                <p className="text-slate-500 leading-relaxed font-medium">{s.desc}</p>
                             </div>
-                            <div className="border-b border-stone-200 pb-8">
-                                <h3 className="text-2xl font-serif mb-2">Modern Luxury Bathrooms</h3>
-                                <p className="text-stone-600">Minimalist, spa-like retreats using natural stone, heated floors, and smart water control systems.</p>
-                            </div>
-                            <div className="border-b border-stone-200 pb-8">
-                                <h3 className="text-2xl font-serif mb-2">Complete Waterproofing</h3>
-                                <p className="text-stone-600">Industry-leading waterproofing systems backed by a 10-year guarantee, crucial for second-story terrace bathrooms.</p>
-                            </div>
-                        </div>
-                        <div className="bg-stone-100 min-h-[400px] relative">
-                            {/* Placeholder for secondary image */}
-                            <div className="absolute inset-0 flex items-center justify-center text-stone-400">
-                                [Work Portfolio Image]
-                            </div>
-                        </div>
+                        ))}
                     </div>
                 </div>
             </section>
 
-            {/* GEO Targeted FAQ */}
-            <section className="w-full py-20 bg-stone-900 text-stone-100">
-                <div className="max-w-4xl mx-auto px-6">
-                    <h2 className="font-serif text-3xl mb-12 text-center">Common Questions regarding North Melbourne Renovations</h2>
-
-                    <div className="space-y-8">
-                        <div className="p-6 bg-stone-800 rounded-sm">
-                            <h4 className="font-medium text-lg mb-2 text-white">Do I need a permit for a bathroom renovation in North Melbourne?</h4>
-                            <p className="text-stone-300">
-                                Generally, internal cosmetic renovations don't require a planning permit. However, if you are altering the structure, moving plumbing significantly in a heritage overlay, or adding a new window/skylight visible from the street, a permit from the City of Melbourne may be required. We handle all council liaison.
-                            </p>
-                        </div>
-                        <div className="p-6 bg-stone-800 rounded-sm">
-                            <h4 className="font-medium text-lg mb-2 text-white">How long does a luxury bathroom renovation take?</h4>
-                            <p className="text-stone-300">
-                                For a high-end renovation in a 3051 terrace, expect a timeline of 4-6 weeks. This allows for demolition, careful waterproofing (curing times), tiling, and plumbing fit-off without cutting corners.
-                            </p>
-                        </div>
-                        <div className="p-6 bg-stone-800 rounded-sm">
-                            <h4 className="font-medium text-lg mb-2 text-white">What is the cost of a bathroom renovation in North Melbourne?</h4>
-                            <p className="text-stone-300">
-                                Luxury renovations typically start from $35,000. This includes premium fixtures (brusheed brass/nickel), floor-to-ceiling tiling, and custom joinery. Heritage restoration work can increase costs due to structural rectification needs.
-                            </p>
+            {/* CTA Section */}
+            <section id="contact" className="w-full py-32 px-4">
+                <div className="max-w-5xl mx-auto bg-blue-600 rounded-[48px] p-12 md:p-24 text-center text-white relative overflow-hidden shadow-2xl shadow-blue-200">
+                    <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-96 h-96 bg-white/10 rounded-full blur-3xl" />
+                    <div className="relative z-10">
+                        <h2 className="text-4xl md:text-6xl font-black mb-8 leading-tight tracking-tight">Ready to get those <br /> jobs done?</h2>
+                        <p className="text-blue-100 text-xl md:text-2xl mb-12 max-w-xl mx-auto font-medium">Send us a quick message or photo of the job for a free estimate within 24 hours.</p>
+                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                            <Link href="tel:0400000000" className="px-10 py-5 bg-white text-blue-600 rounded-2xl font-black text-lg hover:bg-slate-50 transition-all shadow-lg flex items-center justify-center gap-3">
+                                <Phone className="w-5 h-5" /> Call 0400 000 000
+                            </Link>
+                            <Link href="#contact" className="px-10 py-5 bg-blue-700 text-white rounded-2xl font-black text-lg hover:bg-blue-800 transition-all border border-blue-400/30 flex items-center justify-center gap-3">
+                                Online Inquiry
+                            </Link>
                         </div>
                     </div>
                 </div>
             </section>
 
             {/* Footer */}
-            <footer className="w-full py-12 bg-white border-t border-stone-200">
-                <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-sm text-stone-500">
-                    <div>
-                        <p>&copy; 2026 North Melbourne Bathroom Renovations.</p>
-                        <p>Servicing 3051 and surrounding inner-north suburbs.</p>
+            <footer className="w-full py-16 bg-white px-4 border-t border-slate-100">
+                <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+                    <div className="flex items-center gap-2">
+                        <div className="w-8 h-8 bg-slate-900 rounded-lg flex items-center justify-center">
+                            <Star className="text-white w-5 h-5 fill-current" />
+                        </div>
+                        <span className="font-black text-xl tracking-tighter text-slate-900 uppercase">Handyman Melbourne</span>
                     </div>
-                    <div className="mt-4 md:mt-0 flex gap-6">
-                        <Link href="/privacy">Privacy Policy</Link>
-                        <Link href="/terms">Terms of Service</Link>
-                    </div>
+                    <div className="text-slate-400 font-bold text-sm tracking-widest uppercase">© 2026 Professional Home Services</div>
                 </div>
             </footer>
         </main>
